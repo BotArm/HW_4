@@ -42,11 +42,10 @@ app.post('/calculator/rest/divide', function (req, res, next) {
 app.post('/calculator/rest/power2', function (req, res, next) { 
     var body = req.body;  
     var x = body.x;
-    var y = body.y;
     var result = 0;
     var object = {
         "x": x,
-        "result" :x*x
+        "result" :Math.pow(x,2)
     }
     res.json(object);
 });
